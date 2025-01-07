@@ -1,0 +1,92 @@
+<!--DISCLAIMER: If something went wrong compare data model column names with names in the script!!!-->
+
+<property name="today" value="sysdate" dbms="oracle"/>
+<property name="today" value="now()" dbms="postgresql, mysql, hsqldb"/>
+<changeSet id="1" author="homework-carmarket">
+    <insert tableName="CAR">
+        <column name="ID">0a21a983-a293-4ef7-bf41-b6fae54b074c</column>
+        <column name="REGISTRATION_NUMBER">AAA123</column>
+        <column name="MODEL">05ca1353-9d24-4e21-8089-8b0f5f3aa655</column>
+        <column name="PRODUCTION_YEAR">1995</column>
+        <column name="STATUS">I</column>
+        <column name="DATE_OF_SALE">null</column>
+    </insert>
+
+    <insert tableName="CAR">
+        <column name="ID">cdf8c5c7-871e-43c5-8c16-11c1f1b4ba59</column>
+        <column name="REGISTRATION_NUMBER">BBB234</column>
+        <column name="MODEL">05ca1353-9d24-4e21-8089-8b0f5f3aa655</column>
+        <column name="PRODUCTION_YEAR">2001</column>
+        <column name="STATUS">I</column>
+        <column name="DATE_OF_SALE">null</column>
+    </insert>
+
+    <insert tableName="CAR">
+        <column name="ID">4648a6a6-4753-402b-8f1a-52305ba7653e</column>
+        <column name="REGISTRATION_NUMBER">ASD654</column>
+        <column name="MODEL">3ccfc224-1165-4b61-96d7-53c7cd4ba785</column>
+        <column name="PRODUCTION_YEAR">2021</column>
+        <column name="STATUS">S</column>
+        <column name="DATE_OF_SALE" valueDate="${today}"/>
+    </insert>
+
+    <insert tableName="CAR">
+        <column name="ID">8a8a8a11-0e79-482f-934d-fa0b9ccb3c8e</column>
+        <column name="REGISTRATION_NUMBER">OPD456</column>
+        <column name="MODEL">3ccfc224-1165-4b61-96d7-53c7cd4ba785</column>
+        <column name="PRODUCTION_YEAR">2019</column>
+        <column name="STATUS">I</column>
+        <column name="DATE_OF_SALE">null</column>
+    </insert>
+
+    <insert tableName="CAR">
+        <column name="ID">72b36e2a-dad3-49aa-9dd0-15e75b3db0f6</column>
+        <column name="REGISTRATION_NUMBER">DFR561</column>
+        <column name="MODEL">98f3dac4-4c88-4dc1-8b1b-5ddac9119b0f</column>
+        <column name="PRODUCTION_YEAR">2004</column>
+        <column name="STATUS">I</column>
+        <column name="DATE_OF_SALE">null</column>
+    </insert>
+
+    <insert tableName="CAR">
+        <column name="ID">f8907cb6-7999-4bd3-8079-b9a60b9c006c</column>
+        <column name="REGISTRATION_NUMBER">HIP600</column>
+        <column name="MODEL">98f3dac4-4c88-4dc1-8b1b-5ddac9119b0f</column>
+        <column name="PRODUCTION_YEAR">2011</column>
+        <column name="STATUS">S</column>
+        <column name="DATE_OF_SALE" valueDate="${today}"/>
+    </insert>
+
+    <insert tableName="CAR">
+        <column name="ID">7d42977f-3cd6-4594-b2dd-2e0f85aa8535</column>
+        <column name="REGISTRATION_NUMBER">HEL666</column>
+        <column name="MODEL">d9f9136f-21de-41e0-bed9-8a16176d9cd8</column>
+        <column name="PRODUCTION_YEAR">1998</column>
+        <column name="STATUS">I</column>
+        <column name="DATE_OF_SALE">null</column>
+    </insert>
+    <insert tableName="CAR">
+        <column name="ID">ff4efb1a-9fa0-4503-8711-628edd9d27c9</column>
+        <column name="REGISTRATION_NUMBER">ZER000</column>
+        <column name="MODEL">d9f9136f-21de-41e0-bed9-8a16176d9cd8</column>
+        <column name="PRODUCTION_YEAR">2001</column>
+        <column name="STATUS">I</column>
+        <column name="DATE_OF_SALE">null</column>
+    </insert>
+    <insert tableName="CAR">
+        <column name="ID">1d9fce26-d249-4f56-a6d3-a412e580bfc7</column>
+        <column name="REGISTRATION_NUMBER">JAM007</column>
+        <column name="MODEL">d9f9136f-21de-41e0-bed9-8a16176d9cd8</column>
+        <column name="PRODUCTION_YEAR">2014</column>
+        <column name="STATUS">I</column>
+        <column name="DATE_OF_SALE">null</column>
+    </insert>
+    <insert tableName="CAR">
+        <column name="ID">e359f339-0ec3-4b2a-b12c-eb43824e9f69</column>
+        <column name="REGISTRATION_NUMBER">NUM001</column>
+        <column name="MODEL">e471e058-bd6f-40c0-8644-bbc722531abb</column>
+        <column name="PRODUCTION_YEAR">2020</column>
+        <column name="STATUS">S</column>
+        <column name="DATE_OF_SALE" valueDate="${today}"/>
+    </insert>
+</changeSet>
