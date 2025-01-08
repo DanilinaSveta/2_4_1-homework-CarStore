@@ -6,6 +6,7 @@
         <item view="Manufacturer.list"
               title="msg://com.company.homeworkcarstore.view.manufacturer/manufacturerListView.title"/>
         <item view="Model.list" title="msg://com.company.homeworkcarstore.view.model/modelListView.title"/>
+        <item view="Car.list" title="msg://com.company.homeworkcarstore.view.car/carListView.title"/>
     </menu>
 
 </menu-config>

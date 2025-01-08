@@ -7,7 +7,8 @@ import org.springframework.lang.Nullable;
 
 public enum CarStatus implements EnumClass<String> {
 
-    ;
+    IN_STOCK("A"),
+    SOLD("B");
 
     private final String id;
 

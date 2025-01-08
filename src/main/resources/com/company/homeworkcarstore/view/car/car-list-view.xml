@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:c="http://jmix.io/schema/flowui/jpql-condition"
+      title="msg://carListView.title"
+      focusComponent="carsDataGrid">
+    <data>
+        <collection id="carsDc"
+                    class="com.company.homeworkcarstore.entity.Car">
+            <fetchPlan extends="_base">
+                <property name="model" fetchPlan="_base">
+                    <property name="manufacturer" fetchPlan="_base"/>
+                </property>
+            </fetchPlan>
+            <loader id="carsDl" readOnly="true">
+                <query>
+                    <![CDATA[select e from Car e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <urlQueryParameters>
+            <genericFilter component="genericFilter"/>
+            <pagination component="pagination"/>
+        </urlQueryParameters>
+    </facets>
+    <actions>
+        <action id="selectAction" type="lookup_select"/>
+        <action id="discardAction" type="lookup_discard"/>
+    </actions>
+    <layout>
+        <genericFilter id="genericFilter"
+                       dataLoader="carsDl">
+            <properties include=".*"/>
+        </genericFilter>
+        <hbox id="buttonsPanel" classNames="buttons-panel">
+            <button id="createButton" action="carsDataGrid.create"/>
+            <button id="editButton" action="carsDataGrid.edit"/>
+            <button id="removeButton" action="carsDataGrid.remove"/>
+            <button id="markAsSoldBtn" text="Mark as Sold"/>
+            <simplePagination id="pagination" dataLoader="carsDl"/>
+        </hbox>
+        <dataGrid id="carsDataGrid"
+                  width="100%"
+                  minHeight="20em"
+                  dataContainer="carsDc"
+                  columnReorderingAllowed="true">
+            <actions>
+                <action id="create" type="list_create"/>
+                <action id="edit" type="list_edit"/>
+                <action id="remove" type="list_remove"/>
+                <action id="markAsAild" type="list_itemTracking"/>
+            </actions>
+            <columns resizable="true">
+                <column property="registrationNumber"/>
+                <column property="model"/>
+                <column property="productionYear"/>
+                <column property="status"/>
+                <column property="dateOfSale"/>
+            </columns>
+        </dataGrid>
+        <hbox id="lookupActions" visible="false">
+            <button id="selectButton" action="selectAction"/>
+            <button id="discardButton" action="discardAction"/>
+        </hbox>
+    </layout>
+</view>
