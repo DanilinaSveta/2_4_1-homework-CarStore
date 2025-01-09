@@ -41,6 +41,8 @@
                     <button id="createButton" action="manufacturersDataGrid.create"/>
                     <button id="editButton" action="manufacturersDataGrid.edit"/>
                     <button id="removeButton" action="manufacturersDataGrid.remove"/>
+                    <button id="calculateCarsButton" text="Calculate cars"
+                            action="manufacturersDataGrid.calculateCars"/>
                     <simplePagination id="pagination" dataLoader="manufacturersDl"/>
                 </hbox>
                 <dataGrid id="manufacturersDataGrid"
@@ -50,8 +52,9 @@
                           columnReorderingAllowed="true">
                     <actions>
                         <action id="create" type="list_create"/>
-                        <action id="edit" type="list_edit"/>
                         <action id="remove" type="list_remove"/>
+                        <action id="edit" type="list_edit"/>
+                        <action id="calculateCars" type="list_itemTracking"/>
                     </actions>
                     <columns resizable="true">
                         <column property="name"/>
